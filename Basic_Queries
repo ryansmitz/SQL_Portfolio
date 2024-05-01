@@ -1,22 +1,36 @@
+--total active customers
+
 SELECT COUNT(DISTINCT customer_id)	
 FROM customer	
 WHERE activebool = true;	
 
+--total movie titles
+
 SELECT COUNT(DISTINCT film_id)		
 FROM film;		
+
+--average rental duration
 
 SELECT	
 AVG(rental_duration) AS average_rental_duration	
 FROM film	
 
+--total number of staff
+
 SELECT COUNT(DISTINCT staff_id)
 FROM staff;
+
+--total number of stores
 
 SELECT COUNT(DISTINCT store_id)
 FROM store;
 
+--total number of rentals
+
 SELECT COUNT(DISTINCT rental_id)
 FROM rental;
+
+--total revenue generated
 
 SELECT SUM(amount)
 FROM payment;
