@@ -17,3 +17,8 @@ Key Questions Addressed:
 - Where are customers with a high lifetime value based?
 - Do sales figures vary between geographic regions?
 
+Link to Tableau Visualizations:
+https://public.tableau.com/app/profile/ryan.smitz/viz/RockbusterCustomerBaseDistribution/Sheet1
+
+https://public.tableau.com/app/profile/ryan.smitz/viz/RockbusterRevenuebyCountry_17000010867140/Sheet1
+
