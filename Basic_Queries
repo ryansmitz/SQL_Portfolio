@@ -1,0 +1,22 @@
+SELECT COUNT(DISTINCT customer_id)	
+FROM customer	
+WHERE activebool = true;	
+
+SELECT COUNT(DISTINCT film_id)		
+FROM film;		
+
+SELECT	
+AVG(rental_duration) AS average_rental_duration	
+FROM film	
+
+SELECT COUNT(DISTINCT staff_id)
+FROM staff;
+
+SELECT COUNT(DISTINCT store_id)
+FROM store;
+
+SELECT COUNT(DISTINCT rental_id)
+FROM rental;
+
+SELECT SUM(amount)
+FROM payment;
