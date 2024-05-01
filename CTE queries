@@ -1,3 +1,5 @@
+--top countries by revenue
+
 WITH top_countries_by_revenue (country, total_customer_revenue) AS
 (SELECT D.country, SUM(AA.amount)
  
@@ -12,7 +14,7 @@ ORDER BY SUM(AA.amount) DESC)
 SELECT country, total_customer_revenue
 FROM top_countries_by_revenue;
 
-
+--countries with top customers
 
 WITH countries_with_top_customers (customer_id, country, total_customer_revenue) AS
 (SELECT A.customer_id, D.country, SUM(AA.amount)
