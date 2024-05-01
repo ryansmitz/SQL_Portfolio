@@ -1,10 +1,14 @@
+--top grossing films
+
 SELECT film.title, SUM(payment.amount)				
 FROM film INNER JOIN inventory ON film.film_id = inventory.film_id				
 INNER JOIN rental ON rental.inventory_id = inventory.inventory_id				
 INNER JOIN payment ON payment.rental_id = rental.rental_id				
 GROUP BY film.title				
 ORDER BY SUM(payment.amount) DESC				
-LIMIT 5;				
+LIMIT 5;
+
+-lowest grossing films
 
 SELECT film.title, SUM(payment.amount)
 FROM film INNER JOIN inventory ON film.film_id = inventory.film_id
