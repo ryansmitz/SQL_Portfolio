@@ -1,0 +1,17 @@
+SELECT D.country AS country, COUNT(A.customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+GROUP BY D.country
+ORDER BY COUNT(A.customer_id) DESC;
+
+SELECT category.name, SUM(payment.amount)
+FROM film 
+INNER JOIN inventory ON film.film_id = inventory.film_id
+INNER JOIN film_category ON inventory.film_id = film_category.film_id
+INNER JOIN category ON film_category.category_id = category.category_id
+INNER JOIN rental ON rental.inventory_id = inventory.inventory_id
+INNER JOIN payment ON payment.rental_id = rental.rental_id
+GROUP BY category.name
+ORDER BY SUM(payment.amount) DESC;
